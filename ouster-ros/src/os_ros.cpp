@@ -212,7 +212,7 @@ geometry_msgs::msg::TransformStamped transform_to_tf_msg(
 sensor_msgs::msg::LaserScan lidar_scan_to_laser_scan_msg(
     const LidarScan& ls, const rclcpp::Time& timestamp,
     const std::string& frame, const LidarMode ld_mode,
-    const std::vector<int>& pixel_shift_by_row,
+    const uint16_t ring, const std::vector<int>& pixel_shift_by_row,
     const int return_index) {
     sensor_msgs::msg::LaserScan msg;
     msg.header.stamp = timestamp;
